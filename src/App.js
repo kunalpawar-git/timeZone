@@ -9,14 +9,14 @@ function App() {
 
   var ust = new Date().toLocaleString(undefined, { timezone: 'america/new_york' });
   let intervalID;
-  // console.log(ust)
+
 
   function getData() {
     intervalID = setInterval(() => {
       a = new Date();
-      // console.log(a)
+      
       date = a.toLocaleDateString(undefined, options);
-      // console.log(date)
+     
       time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
       document.getElementById('time').innerHTML = time + "<br>on " + date;
     }, 1000);
@@ -28,17 +28,9 @@ function App() {
     stop()
     setInterval(() => {
       const str1 = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
-
-
       let b = str1.split(' ');
-
       let time = b[1].split(':');
-      console.log(b);
       let c = new Date(b[0]).toLocaleDateString('en-us', { weekday: "long", year: "numeric", month: "short", day: "numeric" })
-      // console.log(c);
-      // aaa = str1;
-
-
       time = time[0] + ':' + time[1] + ':' + time[2];
       document.getElementById('time').innerHTML = time + "<br>on " + c;
     }, 1000);

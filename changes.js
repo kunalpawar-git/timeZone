@@ -24,9 +24,9 @@
         function getData() {
             intervalID = setInterval(() => {
                 a = new Date();
-                // console.log(a)
+             
                 date = a.toLocaleDateString(undefined, options);
-                console.log(date)
+        
                 time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
                 document.getElementById('time').innerHTML = time + "<br>on " + date;
             }, 1000);
